@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+/*
+i reused quite a lot of this from my actual
+website, https://consciousb.one/, because why
+not, it saved me time so yeah cool i guess
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    padding: 24px;
+    padding-top: 12px;
+    background-image: url("/static/hackerman.gif");
+    background-blend-mode: saturation;
+    background-color: rgb(51, 0, 0);
+
+    /* font */
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    color: rgb(255, 111, 111);
+}
+
+main {
+  max-width: 70ch;
+  margin: 0 auto;
+  text-align: start;
+}
+
+/* links */
+a:link {
+  color: rgb(252, 143, 143);
+}
+a:visited {
+  color: rgb(252, 143, 143);
+}
+
+.fancy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 31px;
+  font: bold 12px "Source Code Pro", monospace;
+  text-decoration: none;
+  background-color: #4a1515;
+  color: rgb(252, 143, 143);
+  padding: 4px 12px 4px 12px;
+  border: 3px solid #b23b3b;
+}
+
+.fancy-button:hover {
+  background-color: #3a1111;
+  border: 3px solid #9a3232;
+}
+
+/* footer */
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: start;
+  font-size: small;
+  margin-top: auto;
+}
+
+footer img {
+  vertical-align: middle;
+}

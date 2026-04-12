@@ -16,11 +16,13 @@ def url_for_link_id(link_id):
 
 @app.route("/")
 def homepage():
-    return render_template("index.html")
+    textaa = "some random text"
+    return render_template("index.html", value = textaa)
 
 @app.route("/<link_id>")
 def link_interstitial(link_id):
-    return url_for_link_id(link_id)
+    url = url_for_link_id(link_id)
+    return render_template("redirect.html", url = url)
 
 if __name__ == "__main__":
     app.run()

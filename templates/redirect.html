@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>i will hack this club</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <meta http-equiv="refresh" content="2.5;url={{ url|e }}">
         <!-- favicon 
         <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
@@ -22,9 +23,9 @@
     </head>
     <body>
         <main>
-            <h1>hack this <i>url shortener</i></h1>
-            <p>you can consider url hacked...</p>
-            <p>this is highly experimental aaaaa</p>
+            <h1>redirecting...</h1>
+            <p>sending you to: <a href="{{ url|e }}" rel="noopener noreferrer">{{ url }}</a></p>
+            <p>if you aren't redirected, click the link above!</p>
         </main>
 
         <footer>
@@ -32,5 +33,12 @@
             <a href="https://consciousb.one/"><img src="https://consciousb.one/assets/88x31/cbone.png" height="31"></a>
             <a href="https://hackclub.com"><img src="https://consciousb.one/assets/88x31/hc.png"></a>
         </footer>
+
+        <script>
+            const targetURL = {{ url|tojson }};
+            setTimeout(() => { // wait
+                window.location.replace(targetURL);
+            }, 2500);
+        </script>
     </body>
 </html>
