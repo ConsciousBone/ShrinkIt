@@ -13,7 +13,6 @@ def url_for_link_id(link_id):
                 return row["url"]
     return None
 
-
 @app.route("/")
 def homepage():
     textaa = "some random text"
