@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import csv
 
 app = Flask(__name__)
@@ -16,8 +16,11 @@ def url_for_link_id(link_id):
 
 @app.route("/")
 def homepage():
-    return "<p>Hello, World!</p>"
+    return render_template("index.html")
 
 @app.route("/<link_id>")
 def link_interstitial(link_id):
     return url_for_link_id(link_id)
+
+if __name__ == "__main__":
+    app.run()
